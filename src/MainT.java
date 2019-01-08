@@ -13,6 +13,9 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 主函数初始化面板控件和绘图功能
+ */
 public class MainT  {
     private static GC gcMain = null;
     private static int startX;
@@ -47,7 +50,7 @@ public class MainT  {
             }
         });
 
-        // Init vars
+
         shell.addMouseMoveListener(new MouseMoveListener() {
             public void mouseMove(MouseEvent arg0) {
                 if (leftButtonDown) {
@@ -70,13 +73,11 @@ public class MainT  {
                     int width = e.x - startX;
                     int height = e.y - startY;
 
-                    ////////////////////////////////////////////////////////////////
-                    // erase range rect
                     gcMain.setLineStyle(SWT.LINE_DOT);
                     gcMain.setForeground(shell.getBackground());
                     gcMain.drawRectangle(startX, startY, width, height);
                     gcMain.setLineStyle(SWT.LINE_SOLID);
-                    ////////////////////////////////////////////////////////////////
+
 
                     gcMain.setForeground(display.getSystemColor(SWT.COLOR_BLACK));
                     Shape shape;
@@ -112,7 +113,7 @@ public class MainT  {
 
             }
         });
-        shell.setSize(800, 600);
+        shell.setSize(1024, 768);
         shell.setText("DrawBoard");
         shell.setLayout(null);
 
@@ -127,8 +128,8 @@ public class MainT  {
                 }
             }
         });
-        btnOpen.setBounds(10, 525, 80, 27);
-        btnOpen.setText("Open");
+        btnOpen.setBounds(10, 700, 80, 27);
+        btnOpen.setText("打开");
 
         Button btnSave = new Button(shell, SWT.NONE);
         btnSave.addSelectionListener(new SelectionAdapter() {
@@ -143,8 +144,18 @@ public class MainT  {
 
             }
         });
-        btnSave.setBounds(107, 525, 80, 27);
-        btnSave.setText("Save");
+        btnSave.setBounds(107, 700, 80, 27);
+        btnSave.setText("保存");
+
+        Button btnColor = new Button(shell, SWT.NONE);
+        btnColor.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                //
+            }
+        });
+        btnColor.setBounds(207, 700, 80, 27);
+        btnColor.setText("颜色");
 
         ////////////////////////////////////////////////////////
         // add button by shapeTypes

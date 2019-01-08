@@ -10,7 +10,7 @@ public class RoundRect implements Shape {
     private int height;
     private GC gcMain;
 
-    private static final String toolText = "RoundRect";
+    private static final String toolText = "圆角矩形";
     public static String getToolText(){
         return toolText;
     }
@@ -28,7 +28,9 @@ public class RoundRect implements Shape {
     }
     @Override
     public void Draw() {
-        gcMain.drawRectangle(top,left,width,height);
+        //gcMain.drawRectangle(top,left,width,height);
+        gcMain.drawRoundRectangle(top, left, width, height, 30, 30);
+        // gcMain.fillArc(top,left,width,height,20,20);
 
     }
 

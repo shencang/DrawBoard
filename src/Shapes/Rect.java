@@ -9,7 +9,7 @@ public class Rect implements Shape {
     private int height;
     private GC gcMain;
 
-    private static final String toolText = "Rectangle";
+    private static final String toolText = "矩形";
     public static String getToolText(){
         return toolText;
     }
@@ -30,6 +30,7 @@ public class Rect implements Shape {
     public void Draw() {
         gcMain.drawRectangle(top,left,width,height);
     }
+
 
     @Override
     public int getTop() {

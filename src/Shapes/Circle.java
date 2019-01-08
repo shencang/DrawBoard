@@ -9,7 +9,7 @@ public class Circle implements Shape {
     private int height;
     private GC gcMain;
 
-    private static final String toolText = "Circle";
+    private static final String toolText = "圆类";
     public static String getToolText(){
         return toolText;
     }
