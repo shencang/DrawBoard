@@ -157,6 +157,17 @@ public class MainT  {
         btnColor.setBounds(207, 700, 80, 27);
         btnColor.setText("颜色");
 
+
+        Button btnLine = new Button(shell, SWT.NONE);
+        btnColor.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                //
+            }
+        });
+        btnLine.setBounds(307, 700, 80, 27);
+        btnLine.setText("线宽");
+
         ////////////////////////////////////////////////////////
         // add button by shapeTypes
         int indexButton = 0;
