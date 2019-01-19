@@ -114,7 +114,7 @@ public class MainT  {
             }
         });
         shell.setSize(1024, 768);
-        shell.setText("DrawBoard");
+        shell.setText("绘图板");
         shell.setLayout(null);
 
         Button btnOpen = new Button(shell, SWT.NONE);
