@@ -4,3 +4,5 @@
 ### 没有使用swing，使用了eclipse——SWT。
 ### 运行截图：
 ![image](https://github.com/shencang/DrawBoard/blob/master/swt.png)
+
+### 其他
