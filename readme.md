@@ -6,3 +6,4 @@
 ![image](https://github.com/shencang/DrawBoard/blob/master/swt.png)
 
 ### 其他
+请使用java-1.8版本
